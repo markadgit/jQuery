@@ -1,0 +1,70 @@
+<!-- 4章 -->
+<!-- 
+appned()	指定した要素内の末尾に追加
+prepend()	指定した要素内の先頭に追加
+after()	指定した要素の次に追加
+before()	指定した要素の前に追加 -->
+<!-- <body>
+    <h1>jQuery勉強中</h1>
+    <script src="jquery.min.js"></script>
+    <script>
+        // const h1 = $("h1").text();
+
+        // console.log(h1);
+        $("h1").text("jqueryを毎日勉強しています");
+    </script>
+</body> -->
+
+<!-- <body>
+    <ul>
+        <li>Python</li>
+        <li>Ruby</li>
+        <li>PHP</li>
+    </ul>
+    <script src="jquery.min.js"></script>
+    <script>
+        const list = $("<li>", {
+            text: "JavaScript",
+        });
+        $("ul").append(list);
+        $("ul").prepend("<li>Node.Js</li>");
+    </script>
+</body> -->
+
+<!-- <body>
+    <p style="display: none; color: red">入力されたパスワードが違います</p>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $("p").show();
+    </script>
+</body> -->
+
+<!-- テスト自分の解答
+<body>
+    <ul></ul>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $("ul").append("<li>windows</li>");
+        $("ul").append("<li>Mac OS</li>");
+        $("ul").append("<li>Linux</li>");
+        $("ul").append("<li>iOS</li>");
+        $("ul").append("<li>Android</li>");
+    </script>
+</body> -->
+
+テスト
+
+<body>
+    <ul></ul>
+    <script src="jquery.min.js"></script>
+    <script>
+        const list = ["windows", "MacOS"];
+
+        for (let i = 0; i < list.length; i++) {
+            const li = $("<li>", { text: list[i] });
+            $("ul").append(li);
+        }
+    </script>
+</body>

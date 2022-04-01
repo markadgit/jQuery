@@ -1,0 +1,158 @@
+<!-- 5章 -->
+<!-- 
+  click	指定した要素がクリックされたとき
+load	HTMLドキュメントが読み込まれたあと
+scroll	画面がスクロールしたとき
+mousedown / mouseup	マウスボタンが押されたとき／離されたとき
+keydown / keyup	キーボードのキーが押されたとき／離されたとき
+submit	フォームの送信ボタンがクリックされたとき
+resize	ウィンドウサイズが変化したとき -->
+
+<!-- <body>
+    <button>クリック</button>
+    <div></div>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("button").on("click", () => {
+            $("div").text("クリックされました");
+        });
+    </script>
+</body> -->
+
+<!-- <body>
+    <div style="width: 100px; height: 100px; background-color: #555"></div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $("div").on({
+            click: () => {
+                $("div").css("background-color", "red");
+            },
+            dblclick: () => {
+                $("div").css("background-color", "black");
+            },
+            mouseenter: () => {
+                $("div").css("background-color", "blue");
+            },
+        });
+    </script>
+</body> -->
+
+<!-- <body>
+    <p>クリックするかキーを押してください</p>
+    <div></div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).on("click keydown", (e) => {
+            if (e.type === "click") $("div").text("クリックされました");
+            if (e.type === "keydown") $("div").text("キーが押されました");
+        });
+    </script>
+</body> -->
+
+<!-- テスト自分の解答
+jQueryのDOM操作とイベント処理を組み合わせて、シンプルなクリックゲームを作成してみましょう！
+ゲームの内容は、制限時間内に何回クリックができるかを競うものです。以下は、実行画面のサンプルです。 -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>サンプル</title>
+        <style>
+            #wrap {
+                width: 400px;
+                text-align: center;
+            }
+            #text {
+                width: 400px;
+                height: 180px;
+                margin: auto;
+                display: table-cell;
+                vertical-align: middle;
+                font-size: 2em;
+                color: #fff;
+                background-color: #666;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>10</h1>
+            <div id="text">ここをクリックする！</div>
+        </div>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            let time = 10;
+            let score = 0;
+
+            const id = setInterval(() => {
+                if (time < 0) {
+                    clearInterval(id);
+                    alert("結果は" + socre + "回でした");
+                    time = 10;
+                }
+
+                $("h1").text(time--);
+            }, 1000);
+
+            // クリックしたときにスコアを1ずつ加算する処理を記述する
+            $("text").on("click", () => score++);
+        </script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>サンプル</title>
+        <style>
+            #wrap {
+                width: 400px;
+                text-align: center;
+            }
+            #text {
+                width: 400px;
+                height: 180px;
+                margin: auto;
+                display: table-cell;
+                vertical-align: middle;
+                font-size: 2em;
+                color: #fff;
+                background-color: #666;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>10</h1>
+            <div id="text">ここをクリックする！</div>
+        </div>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            let time = 10;
+            let score = 0;
+
+            const id = setInterval(() => {
+                if (time < 0) {
+                    // タイマーが0になったときの処理を記述する
+                    clearInterval(id);
+                    alert("結果は" + score + "回でした！");
+                    time = 10;
+                }
+
+                // カウントダウンを表示する処理を記述する
+                $("h1").text(time--);
+            }, 1000);
+
+            // クリックしたときにスコアを1ずつ加算する処理を記述する
+            $("#text").on("click", () => score++);
+        </script>
+    </body>
+</html>
