@@ -1,0 +1,76 @@
+<!-- <body>
+    <h1>こんにちは</h1>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $("h1").animate({ fontSize: "80px" }, 2000);
+    </script>
+</body> -->
+
+<!-- <html>
+    <head>
+        <style>
+            img {
+                width: 30px; /*画像サイズを極小にする*/
+                opacity: 0; /*透明にして見えないようにする*/
+            }
+        </style>
+    </head>
+    <body>
+        <img src="sample.jpg" width="50" />
+
+        <script src="jquery.min.js"></script>
+        <script>
+            $("img").animate(
+                {
+                    opacity: 1,
+                    width: 400,
+                    marginLeft: "200px",
+                },
+                1000
+            );
+        </script>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head>
+        <style>
+            h1 {
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="text">テキスト</h1>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            $("#text").animate({ left: "90%" }, 1000);
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <style>
+            img {
+                width: 10px;
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <button>表示</button>
+        <div>
+            <img src="sample.jpg" />
+        </div>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            $("button").on("click", () => {
+                $("img").animate({ width: 400, opacity: 1 }, 1000);
+            });
+        </script>
+    </body>
+</html>
